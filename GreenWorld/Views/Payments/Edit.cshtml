@@ -1,0 +1,117 @@
+﻿@model GreenWorld.Models.Payment
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Edit", "Payments"))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.OrderId)
+
+    
+    @Html.Partial("_NewspaperAdminEdit", Model.NewspaperCls)
+
+
+    <hr />
+    <h1>Select Payment methods</h1>
+
+    @foreach (var item in Model.PaymentMethods)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-1">
+                    @*<input type="checkbox" name="SelectedRole" value="@item.Value" checked="@item.Selected" class="checkbox-inline" />*@
+                    <input type="radio" name="paymenttypes" value="@item.Value" checked="@item.Selected" class="paymenttypes" />
+                    @*@Html.RadioButtonFor(model => item.Text, item.Value, new { @checked= @item.Selected,@class = "paymentTypes", @names = "paymentTypes"})*@
+                </div>
+                <div class="col-md-3">
+                    @item.Text
+                </div>
+            </div>
+        </div>
+    }
+
+
+    @Html.HiddenFor(model => model.PaymentChannel)
+
+    <div class="form-group" id="PaymentInstructionsDiv" style="margin-left: 10px;">
+
+    </div>
+
+
+    <div id="mobilePayment" style="display: none;">
+        <div class="form-group">
+            @Html.LabelFor(model => model.PaymentMobile, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PaymentMobile, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PaymentMobile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PaymentTrxId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PaymentTrxId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PaymentTrxId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PaymentAmount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PaymentAmount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PaymentAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="submit-btn" value="Submit" class="btn blue " />
+        </div>
+    </div>
+</div>
+}
+
+
+
+
+<script>
+    $(function ()
+    {
+            var paymentChannel = $("input:radio[name=paymenttypes]:checked").val();
+            ChangeDisplayByPaymentChannel(paymentChannel);
+        
+    });
+
+    function ChangeDisplayByPaymentChannel(paymentChannel) {
+        $("#PaymentInstructionsDiv").empty();
+        $("#PaymentInstructionsDiv").load('/OrderPaymentMethods/FillPaymentsInstructions', { id: paymentChannel }, function (responseTxt, statusTxt, xhr) {
+
+        });
+
+        $("#PaymentChannel").val(paymentChannel);
+        if (paymentChannel === '1' || paymentChannel === '2') {
+            $("#mobilePayment").css("display", "block");
+        } else {
+            $("#mobilePayment").css("display", "none");
+        }
+       
+    }
+
+    $(".paymenttypes").change(function () {
+        var paymentChannel = this.value;
+        ChangeDisplayByPaymentChannel(paymentChannel);
+
+    });
+
+
+</script>

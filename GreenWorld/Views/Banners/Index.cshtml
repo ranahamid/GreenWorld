@@ -1,0 +1,78 @@
+﻿@model IEnumerable<GreenWorld.Models.Banner>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<div class="row">
+    <div class="col-md-2">
+        <span>
+            <a href="@Url.Action("Create")" class="btn btn-default">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                Create New
+            </a>
+        </span>
+    </div>
+    <div class="col-md-2">
+        <span>
+            <a href="@Url.Action("SetBanner")" class="btn btn-default">
+                <span class="glyphicon glyphicon-sort"></span>
+                Set Homepage Banner
+            </a>
+        </span>
+    </div>
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOnUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOnUtc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOnUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedOnUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .row {
+        display: flex; /* equal height of the children */
+    }
+
+    .col {
+        flex: 1; /* additionally, equal width */
+        padding: 1em;
+        border: none;
+    }
+
+    .card-img-top {
+        max-height: 100px;
+        min-height: 100px;
+    }
+</style>
+
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+
+@*Banner*@
+<div class="index-page">
+    <div class="">
+        @{ Html.RenderAction("MenuBanner", "Catalog"); }
+    </div>
+</div>
+
+<section class="tg-main-section tg-haslayout tg-parallaximg home_page_header_image_section mainslideshow-height" data-appear-top-offset="600" data-parallax="scroll" data-image-src="https://www.superiorlearning.ca/assets/front/images/parallax/children.jpg" style="height: 817px;">
+    <div class="homepage_slider mobilehide" style="position: relative;">
+        <img src="https://www.superiorlearning.ca/assets/front/images/slider/image1.jpg" class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; height: 817px;">
+
+
+
+        <img src="https://www.superiorlearning.ca/assets/front/images/slider/image1.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 0; display: block; visibility: hidden; height: 817px;"><img src="https://www.superiorlearning.ca/assets/front/images/slider/image2.jpg" class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: visible; height: 817px; opacity: 1; display: block;"><img src="https://www.superiorlearning.ca/assets/front/images/slider/image3.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; height: 817px; opacity: 0; display: block;">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="tg-sectionhead">
+                    <h2>Learning has never been this easy!</h2>
+                    <h3>Find a University &amp; Affordable institute  in the China</h3>
+                </div>
+                <div class="homeage_selectors text-center">
+                    <div class="tri_button active">
+                        <img src="https://www.superiorlearning.ca/assets/front/images/tutor-inperson.png">
+                        <span class="head">In China</span>
+                        <span class="mobilehide">Find a University</span>
+                        <span class="arrow"></span>
+                    </div>
+                    <div class="tri_button">
+                        <a href="/Teachers/Index">
+                            <img src="https://www.superiorlearning.ca/assets/front/images/tutor-become.png">
+                            <span class="head">Become a Agent</span>
+                            <span class="mobilehide">Start agentship with us today</span>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row homepage_search_form_section">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="homepage_search_form_wrapper">
+          
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*testimonial*@
+
+
+@*are you teacher*@
+<section id="TeacherCTA" class="Landing">
+    <div class="Container">
+        <div class="PageDesc">
+            <h3 class="Large NormalWeight">Are You a Student?</h3>
+            <h4 class="ExtraSmall LightWeight">
+                Find out how Green World can help you grow and manage your Study in China
+            </h4>
+        </div>
+        <div>
+            <a class="Button Green" href="/Study">Learn More</a>
+        </div>
+    </div>
+</section>

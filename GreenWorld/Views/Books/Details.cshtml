@@ -1,0 +1,88 @@
+﻿@model GreenWorld.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstructionsImageUrl)
+        </dt>
+
+        <dd>
+            @{
+                if (!string.IsNullOrEmpty(Model.InstructionsImageUrl))
+                {
+
+                    <a href="@Model.InstructionsImageUrl" data-lightbox="image-1" data-title="@Model.Name">
+                        <img src="@Model.InstructionsImageUrl" class="img-display" />
+                    </a>
+                }
+            }
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.IsBook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBook)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsStationary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsStationary)
+        </dd>*@
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOnUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOnUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOnUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOnUtc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowOnHomePage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowOnHomePage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

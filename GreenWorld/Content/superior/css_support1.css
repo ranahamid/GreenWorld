@@ -1,0 +1,213 @@
+.number_wraper {
+    background-color: #db0014;
+    border: 1px solid red;
+    border-radius: 76px;
+    color: #fff;
+    font-size: 43px;
+    height: 150px;
+    padding-top: 59px;
+    text-align: center;
+    width: 151px;
+}
+.how_we_work_page.tg-features .tg-feature .description {
+    padding-left: 20px;
+    width: calc(100% - 151px);
+}
+.become_tutor{
+	clear: both;
+}
+.become_tutor h4{
+	text-align: center;
+	font-size: 54px;
+	color: #000;
+	text-transform: capitalize;
+	padding: 40px 0px;
+
+}
+.become_tutor h3{
+	font-size: 35px;
+	color: #000;
+}
+.description p{
+	font-size: 22px;
+}
+.find_tutor_now a {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    width: 300px;
+    cursor:pointer;
+}
+.tutor_right_sidebar .contact_tutor_wrapper{margin-bottom:0px !important;}
+.tutor_right_sidebar .tg-widgettitle{margin-top:20px;}
+.tutor_info_section h2{border-bottom:2px solid #03022D; color:#03022D;    text-transform: none;
+    font-size: 26px;}
+
+.tutor_items {
+border-radius: 10px;
+width: 100%;
+text-align: center;
+}
+.tutor_benifts h4{
+	text-align: center;
+	font-size: 42px;
+	color: #fff;
+	text-transform: capitalize;
+	padding: 40px 0px;
+}
+.tutor_items_wraper h3 {
+    font-size: 26px;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.tutor_items_wraper p {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.become_a_tutor h4{
+	text-align: center;
+	font-size: 42px;
+	color: #000;
+	text-transform: unset;
+	padding-top: 5px;
+	margin-bottom: 0px;
+}
+.become_a_tutor h5{
+	text-align: center;
+	font-size: 20px;
+	text-transform: capitalize;
+	padding-bottom: 10px;
+}
+.become_a_tutor p{
+	text-align: center;
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+.footer_subject_listing {
+    background-color: #062e57 !important;
+}
+.sub_heading h3 {
+    padding-bottom: 15px !important;
+    padding-left: 0 !important;
+    color: #fff;
+}
+.footer_subject_listing .second_ul {
+    padding-top: 35px !important;
+}
+.sub_heading_wraper ul li a {
+    color: #fff;
+}
+.sub_heading_wraper ul li {
+    list-style: outside none none;
+}
+.chat_btn, .gotohome_btn {
+    width: 240px;
+    border: 5px solid #121543;
+    color: #000;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.gotohome_btn{float:right;}
+.chat_btn{float:left;}
+.thankyou_btn{max-width:550px; margin:0 auto 120px;}
+.tankyou_txt{font-size:18px; line-height:25px; 
+    color:#000; max-width:600px; margin:10px auto 50px; font-weight:bold;}
+.meeting_request.pull-left{cursor:pointer;}
+.homepage_search_form_wrapper .item{padding-left:15px !important;}
+.homepage_search_form_wrapper .category{font-weight:bold;}
+.tg-header .header_right_navs {
+    max-width: 900px;
+}
+.tg-header{padding:0px 0px !important;}
+.tg-dashboardinnerbanner{height: 200px;}
+.tg-dashboardinnerbanner { height: 180px;}
+.tg-tutordetail .tg-contentbox{padding-top:30px;}
+.tutor_info_section h2 .fa{color:#db0014}
+.parallax-mirror {
+    height: 180px;	
+	}
+.wickedpicker__controls{  margin-top: -15px !important;}
+.wickedpicker {
+    z-index: 9999;}
+.timepicker,.time{width:100%;}
+html input[disabled]{background-color:#EEEEEE;}
+.pac-container {
+    z-index: 1051 !important;
+}
+.fa{transition:all 0.3s linear}
+#tg-top-nav a:hover .fa,.contact_location_wrapper .location_item:hover .fa,.footer_socials a:hover .fa,.social_icons a:hover .fa{
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+input.tutor_certification{display:none; width:100%; margin-top:10px;}
+.tutor_signup.red_button{cursor:pointer;}
+/*.show_hidden_major_wrap li:nth-child(n+6),.show_hidden_cities_wrap li:nth-child(n+8) {
+    display: none;
+}*/
+.show_hidden_major_wrap li.show_hidden_others,
+.show_hidden_cities_wrap li.show_hidden_others {
+    cursor: pointer;
+    display: block;
+}
+.section.home_page_header_image_section > .container{
+		bottom: 0;
+	  	      left: 0;
+	      margin: auto;
+	      position: absolute;
+	      right: 0;
+	      top: 100px;
+	      z-index: 1000;
+	}
+.mobile_contact_btn{display:none;}
+.tutor_info_section .additional_info{clear:both;}
+.new_message_alert  {position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+#student_signup_overlay .tg-checkbox{margin-bottom:10px;}
+.contactus_form #message{font-size:14px;}
+.how_we_work_page .desc{padding-left:40px;}
+.how_we_work_page .desc h3 {
+    text-align: left;
+}
+.tg-tutorinfo .tg-description p{font-weight:normal;}
+#tg-navigation{position:relative;}
+.tg-innerbanner.tg-parallaximg::before,.tg-parallaximg::before{background:transparent !important;}
+@media (max-width:767px){
+
+.tutor_detail_page .tg-jobsmetadata .tutor_add_review{display:none;}
+.tutor_detail_page .tg-tutorinfo {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.tutor_detail_page .tg-tutor{position:relative;}
+.tutor_detail_page .tg-tutor .tg-jobhead h3 {
+    float: left;
+    padding-left: 100px;
+    padding-top: 10px;
+    white-space: nowrap;
+}
+.tg-detailpage .tg-jobsmetadata {
+    margin-top: 60px;
+}
+.tg-detailpage .tg-tutor .tg-priceperhour {
+   
+    left: 100px;
+    top: 60px;
+    text-align: left !important;
+}
+.tutor_right_sidebar .contact_tutor_wrapper{display:none;}
+.mobile_contact_btn{display:block;}
+}

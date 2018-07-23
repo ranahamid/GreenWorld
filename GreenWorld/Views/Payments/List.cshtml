@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GreenWorld.Models.Payment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+
+
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </th>
+    
+      
+        @*<th>
+            @Html.DisplayNameFor(model => model.PaymentChannel)
+        </th>*@
+
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentAmount)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOnUtc)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Invoice", "Invoice", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>    
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>     
+
+        
+       
+            @*<td>
+                @Html.DisplayFor(model => item.PaymentChannelName)
+            </td>*@
+
+            <td>
+                @Html.DisplayFor(model => item.PaymentAmount)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOnUtc)
+            </td>
+
+       
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,70 @@
+﻿@model GreenWorld.Models.ProductViewModel
+
+<div class="portfolio-content portfolio-4">
+    <div id="js-filters-full-width2" class="cbp-l-filters-alignCenter">
+        <div data-filter=".books" class="cbp-filter-item ">
+            Books
+            <div class="cbp-filter-counter"></div>
+        </div>
+        <span>/</span>
+        <div data-filter=".Stationaries" class="cbp-filter-item">
+            Stationaries
+            <div class="cbp-filter-counter"></div>
+        </div>
+    </div>
+
+    <div id="js-grid-full-width2" class="cbp">
+        @foreach (var item in Model.Books)
+        {
+            <div class="cbp-item  books">
+                <a href="/Books/Details/@item.Id" class="cbp-caption cbp-lightbox2" data-title="@item.Name">
+                    <div class="col-md-3" style="min-height:60px;">
+                        <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                            <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> @item.Name</h3>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+        }
+
+        <div class="cbp-item books">
+            <a href="Books/SearchAll/" class="cbp-caption cbp-lightbox" data-title="Search All">
+                <div class="col-md-3" style="min-height:60px;">
+                    <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                        <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> View All Books</h3>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+        @foreach (var item in Model.Stationary)
+        {
+            <div class="cbp-item  Stationaries">
+                <a href="/Stationaries/Details/@item.Id" class="cbp-caption cbp-lightbox2" data-title="@item.Name">
+                    <div class="col-md-3" style="min-height:60px;">
+                        <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                            <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> @item.Name</h3>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        }
+        <div class="cbp-item Stationaries">
+            <a href="Stationaries/SearchAll/" class="cbp-caption cbp-lightbox" data-title="Search All">
+                <div class="col-md-3" style="min-height:60px;">
+                    <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                        <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> View All Stationaries</h3>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+@*<script src="~/Content/metronic/jquery.cubeportfolio.js"></script>*@

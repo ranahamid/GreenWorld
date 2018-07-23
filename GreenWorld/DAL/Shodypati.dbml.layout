@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 15" name="GreenWorld">
+  <DataContextMoniker Name="/GreenWorldDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8d22f296-9a21-4fd9-9a29-31c031b3a61e" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/GreenWorldDataContext/BannerImageTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2eb43b1-adbd-4ed4-9cb2-6ff6c2c65315" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07305949-52a8-4dee-a9cd-756b1da6eab5" absoluteBounds="3.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/GreenWorldDataContext/UserTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d6490d0-ab92-48ca-8701-d4892d3a4ed6" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="742e0107-16b1-4b5e-a858-49f1bfba3b59" absoluteBounds="1.875, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GreenWorldDataContext/BannerTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c1b1e72-6968-4574-a9da-0bd0252cf72c" absoluteBounds="1.8900000000000001, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ce1c080-d88b-4f8b-bd06-7910b3266140" absoluteBounds="3.75, 4.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/GreenWorldDataContext/CategoryTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5ee6a4b-5981-41f7-a011-43da4864a0f1" absoluteBounds="3.765, 5.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3376af2-242b-4c61-a444-adb0b99648ca" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/GreenWorldDataContext/CustomerSearchTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="476d63e8-9cb2-42b0-b738-aaea216bbc12" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a3d341c-5c6e-415e-8a0f-6380e8ed2c2c" absoluteBounds="6.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/GreenWorldDataContext/GeoZoneTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7a23366-c670-46e1-87b9-d309722703ff" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c984bb50-c0fc-45d9-9b4c-e0cd3d933405" absoluteBounds="6.75, 6.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GreenWorldDataContext/LogTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cff8ba2e-dfe8-4f5c-bfeb-d23545fa412d" absoluteBounds="6.765, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba8182f0-9161-4906-bd7d-9de1244e8b8f" absoluteBounds="0.75, 8.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/GreenWorldDataContext/NewspaperTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dab82753-df1b-4bd4-90a4-9281b9995f04" absoluteBounds="0.765, 9.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11cc6e96-a078-492c-9fe8-25763e08d9e2" absoluteBounds="9.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/GreenWorldDataContext/OrderPaymentMethodTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="574d6b2e-1ceb-4c7a-a157-5d821dcee6e6" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3df48d37-4abe-43a6-bbad-5f24493a5e8e" absoluteBounds="9.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/GreenWorldDataContext/OrderPaymentStatusTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b47c2365-ff26-4360-b840-ba274bdcd0ce" absoluteBounds="9.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00722cad-3369-43e3-9354-a5cc79bcb2f1" absoluteBounds="9.75, 6.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GreenWorldDataContext/PaymentTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="566abf93-4366-4225-b590-b734c23d2445" absoluteBounds="9.765, 7.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="313231fc-8bed-41dc-93a5-1e7c918e018a" absoluteBounds="4.625, 9.75, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/GreenWorldDataContext/TeacherTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e5a3f9a-f977-4716-9bb4-729f333d1cc2" absoluteBounds="4.64, 10.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f70afe85-69cf-4620-8b28-d1a14d589224" absoluteBounds="5, 4.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/GreenWorldDataContext/ProductTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c65de627-c66c-46e2-abd1-8b405c5ed916" absoluteBounds="5.015, 4.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
