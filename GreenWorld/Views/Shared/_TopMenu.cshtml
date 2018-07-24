@@ -15,10 +15,10 @@
                                 <a href='/Dashboard/Index'>Admin Panel</a>
                             </li>
                         }
-                        @if (Request.IsAuthenticated && User.IsInRole("Teacher"))
+                        @if (Request.IsAuthenticated && User.IsInRole("Agent"))
                         {
                             <li>
-                                <a href='/Teachers/Dashboard'>Teacher Panel</a>
+                                <a href='/Teachers/Dashboard'>Agent Panel</a>
                             </li>
                         }
                         @if (Request.IsAuthenticated && User.IsInRole("Student"))
@@ -27,7 +27,7 @@
                                 <a href='/Students/Dashboard'>Student Panel</a>
                             </li>
                         }
-                        <li><a href='/Home/About'>ABOUT</a></li>
+
                         @*<li>
                             <a href='#'>PRODUCTS</a>
                             <ul>
@@ -47,9 +47,9 @@
                                 </li>
                             </ul>
                         </li>*@
-
+                        <li><a href='/Apply/Index'>Apply Now</a></li>
                         <li><a href='/Home/Contact'>CONTACT</a></li>
-
+                        <li><a href='/Home/About'>ABOUT</a></li>
                         @Html.Partial("_LoginPartial")
 
                     </ul>
