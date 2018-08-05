@@ -1,0 +1,77 @@
+﻿@model GreenWorld.Models.Testimonial
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Testimonial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOnUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOnUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOnUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOnUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

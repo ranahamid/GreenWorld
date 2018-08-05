@@ -1,0 +1,93 @@
+﻿@model IEnumerable<GreenWorld.Models.Testimonial>
+
+
+<style>
+    #owl-demo .item {
+        margin: 3px;
+    }
+
+        #owl-demo .item img {
+            display: block;
+            height: auto;
+        }
+
+
+
+    .item {
+        text-align: center;
+        margin: 20px 30px 40px;
+    }
+
+        .item .pic {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 25px;
+            border: 4px solid #6b2014;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+            .item .pic img {
+                width: 100%;
+                height: auto;
+            }
+
+        .item .description {
+            padding: 0 20px 20px;
+            font-size: 15px;
+            color: white;
+            line-height: 30px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+        }
+
+        .item .title {
+            display: block;
+            margin: 0 0 7px 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .item .post {
+            display: block;
+            font-size: 15px;
+            color: white;
+            text-transform: capitalize;
+        }
+
+
+    .owl-stage-outer {
+        position: relative;
+        z-index: 10;
+    }
+
+    .owl-controls {
+        position: relative;
+        z-index: 99;
+        margin-top: -23px;
+        margin-right: -423px;
+    }
+</style>
+
+
+@if (Model != null && Model.Count() > 0)
+{
+<div id="owl-demo" style="background-image: url('../Content/images/pic-01.jpg');">
+    @foreach (var item in Model)
+    {
+    <div class="item">
+        <div class="pic">
+            <img src="@item.ImagePath">
+        </div>
+        <p class="description"> @item.Description  </p>
+        <h3 class="title"> @item.PersonName</h3>
+        <span class="post"> @item.PersonTitle</span>
+    </div>
+    }
+</div>
+}
+

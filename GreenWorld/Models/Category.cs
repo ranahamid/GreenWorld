@@ -20,7 +20,6 @@ namespace GreenWorld.Models
         [Display(Name = "ক্যাটাগরি নাম")]
         public string Name_Bangla { get; set; }
 
-        public string RawDBImagePath { get; set; }
 
         [AllowHtml]
         [Display(Name = "Description")]
@@ -28,6 +27,8 @@ namespace GreenWorld.Models
 
         [Display(Name = "Display Order")]
         public int? DisplayOrder { get; set; }
+
+        public string RawDBImagePath { get; set; }
 
         [Display(Name = "Category Image")]
         public string ImagePath { get; set; }

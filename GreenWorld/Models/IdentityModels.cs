@@ -56,7 +56,6 @@ namespace GreenWorld.Models
             return new ApplicationDbContext();
         }
 
-       
     }
 
 

@@ -259,6 +259,8 @@
     <Compile Include="Controllers\Api\OrderPaymentMethodApiController.cs" />
     <Compile Include="Controllers\Api\OrderPaymentStatusApiController.cs" />
     <Compile Include="Controllers\Api\PaymentApiController.cs" />
+    <Compile Include="Controllers\Api\TestimonialApiController.cs" />
+    <Compile Include="Controllers\Api\UniversityApiController.cs" />
     <Compile Include="Controllers\BannersController.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -279,11 +281,15 @@
     <Compile Include="Controllers\OrderPaymentMethodsController.cs" />
     <Compile Include="Controllers\OrderPaymentStatusController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\TestimonialsController.cs" />
+    <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AccountDataAccessRepository.cs" />
     <Compile Include="DAL\BannerDataAccessRepository.cs" />
     <Compile Include="DAL\CategoryDataAccessRepository.cs" />
     <Compile Include="DAL\IProductAccessRepository.cs" />
+    <Compile Include="DAL\ITestimonialAccessRepository.cs" />
+    <Compile Include="DAL\IUniversityAccessRepository.cs" />
     <Compile Include="DAL\ProductDataAccessRepository.cs" />
     <Compile Include="DAL\Shodypati.cs">
       <DependentUpon>Shodypati.dbml</DependentUpon>
@@ -308,6 +314,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Shodypati.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAL\TestimonialDataAccessRepository - Copy.cs" />
+    <Compile Include="DAL\UniversityDataAccessRepository.cs" />
     <Compile Include="Filters\ExceptionHandlerAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -335,6 +343,8 @@
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Merchant.cs" />
     <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Testimonial.cs" />
+    <Compile Include="Models\University.cs" />
     <Compile Include="Models\UserRegistrationInfo.cs" />
     <Compile Include="Models\NullObjectCache.cs" />
     <Compile Include="Models\Shipment.cs" />
@@ -1244,7 +1254,6 @@
     <Content Include="Content\images\banners\58646203\thumbs\cropped-teaching-online-banner80x80.jpg" />
     <Content Include="Content\images\banners\94490826\improvedlearning_banner.jpg" />
     <Content Include="Content\images\banners\94490826\thumbs\improvedlearning_banner80x80.jpg" />
-    <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\categories\1453152\Algebra.png" />
     <Content Include="Content\images\categories\1453152\thumbs\Algebra80x80.jpg" />
     <Content Include="Content\images\categories\21123658\Physical-Chemistry-03.jpg" />
@@ -1277,20 +1286,35 @@
     <Content Include="Content\images\categories\93412275\thumbs\Koren-images80x80.jpg" />
     <Content Include="Content\images\categories\9819947\Math-Ed-Banner.jpg" />
     <Content Include="Content\images\categories\9819947\thumbs\Math-Ed-Banner80x80.jpg" />
-    <Content Include="Content\images\heart.gif" />
+    <Content Include="Content\images\children.jpg" />
+    <Content Include="Content\images\image1.jpg" />
+    <Content Include="Content\images\image2.jpg" />
+    <Content Include="Content\images\image3.jpg" />
     <Content Include="Content\images\ImageAttribution.txt" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\parents.jpg" />
     <Content Include="Content\images\pattern\circles-light.png" />
     <Content Include="Content\images\pattern\dots.png" />
     <Content Include="Content\images\payment\bKash_payment_Process.png" />
     <Content Include="Content\images\payment\rocket-payment.png" />
+    <Content Include="Content\images\pic-01.jpg" />
+    <Content Include="Content\images\pic-02.jpg" />
     <Content Include="Content\images\Products\38035602\Math-Ed-Banner.jpg" />
     <Content Include="Content\images\Products\38035602\thumbs\Math-Ed-Banner80x80.jpg" />
     <Content Include="Content\images\Products\62203730\c05523710.png" />
     <Content Include="Content\images\Products\62203730\thumbs\c0552371080x80.jpg" />
     <Content Include="Content\images\Products\69154903\learn-english-at-marbella-international-spanish-school-marbella.jpg" />
     <Content Include="Content\images\Products\69154903\thumbs\learn-english-at-marbella-international-spanish-school-marbella80x80.jpg" />
-    <Content Include="Content\images\right_arrow.png" />
+    <Content Include="Content\images\testimonials\14174087\parents.jpg" />
+    <Content Include="Content\images\testimonials\14174087\thumbs\parents80x80.jpg" />
+    <Content Include="Content\images\testimonials\80418418\julianne_moore3.jpg" />
+    <Content Include="Content\images\testimonials\80418418\thumbs\julianne_moore380x80.jpg" />
+    <Content Include="Content\images\tutor-become.png" />
+    <Content Include="Content\images\tutor-inperson.png" />
+    <Content Include="Content\images\Universities\14685962\22.jpg" />
+    <Content Include="Content\images\Universities\14685962\thumbs\2280x80.jpg" />
+    <Content Include="Content\images\Universities\61611416\11.jpg" />
+    <Content Include="Content\images\Universities\61611416\thumbs\1180x80.jpg" />
     <Content Include="Content\Ionicons\css\ionicons.css" />
     <Content Include="Content\Ionicons\fonts\ionicons.svg" />
     <Content Include="Content\jquery-clockpicker\bootstrap-clockpicker.css" />
@@ -1352,6 +1376,7 @@
     <Content Include="Content\superior\owl.theme.css" />
     <Content Include="Content\superior\responsive.css" />
     <Content Include="Content\superior\simplyscroll.css" />
+    <Content Include="Content\superior\superior-style.css" />
     <Content Include="Content\superior\wickedpicker.min.css" />
     <Content Include="Scripts\modernizr-2.6.2.min.js" />
     <Content Include="Content\normalize.css" />
@@ -3583,7 +3608,6 @@
     <Content Include="Content\metronic\uxsolutions-bootstrap-datepicker-v1.7.1-12\css\bootstrap-datepicker3.standalone.css.map" />
     <Content Include="Content\assets\pages\media\blog\Thumbs.db" />
     <Content Include="Content\assets\pages\media\pages\Thumbs.db" />
-    <Content Include="Content\superior\style.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Scripts\jquery-slimscroll\jquery.slimscroll.js" />
     <Content Include="Scripts\moment\moment-with-locales.js" />
@@ -4034,6 +4058,22 @@
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Shared\_ProductsHomePage.cshtml" />
+    <Content Include="Views\Universities\Create.cshtml" />
+    <Content Include="Views\Universities\Delete.cshtml" />
+    <Content Include="Views\Universities\Details.cshtml" />
+    <Content Include="Views\Universities\Edit.cshtml" />
+    <Content Include="Views\Universities\Index.cshtml" />
+    <Content Include="Views\Catalog\_EasyAs123.cshtml" />
+    <Content Include="Views\Catalog\_HomePageSearch.cshtml" />
+    <Content Include="Views\Catalog\_LessonsPortfolio.cshtml" />
+    <Content Include="Views\Catalog\_ProductsPortfolio.cshtml" />
+    <Content Include="Views\Catalog\_Testimonial.cshtml" />
+    <Content Include="Views\Testimonials\Create.cshtml" />
+    <Content Include="Views\Testimonials\Delete.cshtml" />
+    <Content Include="Views\Testimonials\Details.cshtml" />
+    <Content Include="Views\Testimonials\Edit.cshtml" />
+    <Content Include="Views\Testimonials\Index.cshtml" />
+    <Content Include="Views\Universities\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

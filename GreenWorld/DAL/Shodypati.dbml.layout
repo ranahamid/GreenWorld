@@ -80,5 +80,17 @@
         <elementListCompartment Id="c65de627-c66c-46e2-abd1-8b405c5ed916" absoluteBounds="5.015, 4.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="b89d7a15-0fef-4f28-9a0e-247653d1267a" absoluteBounds="1, 4.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/GreenWorldDataContext/UniversityTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab82c5e9-0a79-4177-b1b3-98c3d730a1ea" absoluteBounds="1.0150000000000001, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5de1453d-2f7b-41d8-89f9-b3f3b843e0ff" absoluteBounds="1.375, 3.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/GreenWorldDataContext/TestimonialTbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17086330-074e-4fbb-8bef-13925471f73a" absoluteBounds="1.3900000000000001, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

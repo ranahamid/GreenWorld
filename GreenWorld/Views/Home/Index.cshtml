@@ -1,6 +1,8 @@
 ﻿@{
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 
 <style>
@@ -30,13 +32,19 @@
     </div>
 </div>
 
-<section class="tg-main-section tg-haslayout tg-parallaximg home_page_header_image_section mainslideshow-height" data-appear-top-offset="600" data-parallax="scroll" data-image-src="https://www.superiorlearning.ca/assets/front/images/parallax/children.jpg" style="height: 817px;">
+<section class="tg-main-section tg-haslayout tg-parallaximg home_page_header_image_section mainslideshow-height" data-appear-top-offset="600" data-parallax="scroll"
+         data-image-src="/Content/images/children.jpg" style="height: 817px;">
+
     <div class="homepage_slider mobilehide" style="position: relative;">
-        <img src="https://www.superiorlearning.ca/assets/front/images/slider/image1.jpg" class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden; height: 817px;">
+        <img src="/Content/images/pic-01.jpg" class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1;
+                display: block; visibility: hidden; height: 817px;">
 
 
-
-        <img src="https://www.superiorlearning.ca/assets/front/images/slider/image1.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 0; display: block; visibility: hidden; height: 817px;"><img src="https://www.superiorlearning.ca/assets/front/images/slider/image2.jpg" class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: visible; height: 817px; opacity: 1; display: block;"><img src="https://www.superiorlearning.ca/assets/front/images/slider/image3.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; height: 817px; opacity: 0; display: block;">
+        <img src="/Content/images/image1.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 0; display: block;
+            visibility: hidden; height: 817px;"><img src="/Content/images/image2.jpg" class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px;
+                left: 0px; z-index: 99; visibility: visible; height: 817px; opacity: 1; display: block;">
+        <img src="/Content/images/image3.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; height:
+            817px; opacity: 0; display: block;">
     </div>
     <div class="container">
         <div class="row">
@@ -46,49 +54,59 @@
                     <h3>Find a University &amp; Affordable institute  in the China</h3>
                 </div>
                 <div class="homeage_selectors text-center">
-                    <div class="tri_button active">
-                        <img src="https://www.superiorlearning.ca/assets/front/images/tutor-inperson.png">
-                        <span class="head">In China</span>
-                        <span class="mobilehide">Find a University</span>
-                        <span class="arrow"></span>
+                    <div class="tri_button " style="background-color:cornflowerblue;">
+                        @*<div class="tri_button active">*@
+                        <a href="/Teachers/Index">
+                            <img src="/Content/images/tutor-inperson.png">
+                            <span class="head">In China</span>
+                            <span class="mobilehide">Find a University</span>
+                            <span class="arrow"></span>
+                        </a>
                     </div>
                     <div class="tri_button">
-                        <a href="/Teachers/Index">
-                            <img src="https://www.superiorlearning.ca/assets/front/images/tutor-become.png">
+                        <a href="/Account/Register">
+                            <img src="~/Content/images/tutor-become.png">
                             <span class="head">Become a Agent</span>
-                            <span class="mobilehide">Start agentship with us today</span>
+                            <span class="mobilehide">Register As Agent</span>
                             <span class="arrow"></span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row homepage_search_form_section">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="homepage_search_form_wrapper">
-          
-
-                </div>
-            </div>
-        </div>
+       
     </div>
 </section>
 
 
+@*Easy as*@
+
+@{ Html.RenderAction("EasyAs123", "Catalog"); }
+
 @*testimonial*@
+<div class="margin-top-10">
+    @{ Html.RenderAction("Testimonial", "Catalog"); }
+</div>
 
 
 @*are you teacher*@
 <section id="TeacherCTA" class="Landing">
     <div class="Container">
         <div class="PageDesc">
-            <h3 class="Large NormalWeight">Are You a Student?</h3>
+            <h3 class="Large NormalWeight">Are You a Agents?</h3>
             <h4 class="ExtraSmall LightWeight">
-                Find out how Green World can help you grow and manage your Study in China
+                Find out how Green World can help you grow and manage your business
             </h4>
         </div>
-        <div>
-            <a class="Button Green" href="/Study">Learn More</a>
+        <div class="col-sm-12 text-center">
+            @Html.ActionLink("Learn More!", "Index", "Agents", new object { }, new { @class = "red_button" })
         </div>
     </div>
 </section>
+
+
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+    });
+</script>

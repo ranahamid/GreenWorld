@@ -1,0 +1,80 @@
+﻿@model GreenWorld.Models.HomePageSearch
+@using GreenWorld.Models
+
+@using (Html.BeginForm("Index", "Tutors", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row" style="color:white;">
+        <div class="col-md-2">
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.SelectedCategoryId, new { @class = "col-md-2 control-label" })*@
+                <div class="col-md-12">
+                    @*@Html.DropDownListFor(model => model.SelectedCategoryId, Model.Category, "Category", new { @class = "form-control" })*@
+                    @Html.DropDownListFor(m => Model.SelectedCategoryId, Model.Category, "Category", new { @id = "doctortypeid", @class = "form-control", @onchange = "FillDoctors()" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-2">
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.SelectedClassNameId, new { @class = "col-md-2 control-label" })*@
+                <div class="col-md-12">
+                    @Html.DropDownListFor(model => model.SelectedClassNameId, Model.ClassName, "Class", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group" id="doctorsdiv">
+
+                <div class="col-md-12">              
+                    @Html.Partial("_DoctorsDrop", new SubjectViewModel()
+                       {
+                           SelectedCatId = Model.SelectedCategoryId
+                       })
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.SelectedLocationId, new { @class = "col-md-2 control-label" })*@
+                <div class="col-md-12">
+                    @Html.DropDownListFor(model => model.SelectedLocationId, Model.Location, "Location", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.SelectedRangeId, new { @class = "col-md-2 control-label" })*@
+                <div class="col-md-12">
+                    @Html.DropDownListFor(model => model.SelectedRangeId, Model.Range, "Range", new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group action_button" style="margin-top:10px;">
+        <button class="button search_button text-center col-md-4 col-md-offset-3 red_button">FIND A TUTOR NOW!</button>
+    </div>
+    <div style="margin-top:10px;">
+        <h3 class="text-center col-md-4 col-md-offset-3">or Call <strong>01720-229697</strong></h3>
+    </div>
+}
+
+<script>
+
+    function FillDoctors()
+    {
+        var id = $('#doctortypeid').val();
+
+        $("#doctorsdiv").empty();
+        $("#doctorsdiv").load('/Catalog/FillChildCategory', { id: id }, function (responseTxt, statusTxt, xhr) {
+            var doctorselected = $('#doctortypeid :selected').val();
+            console.log("Selected: " + doctorselected);
+        });
+    }
+</script>

@@ -72,5 +72,17 @@ namespace GreenWorld.Controllers
         }
 
 
+        public ActionResult EasyAs123()
+        {
+            return PartialView("_EasyAs123");
+        }
+        public ActionResult Testimonial()
+        {
+            url = baseUrl + "api/TestimonialApi/";
+            var responseMessage = new WebClient().DownloadString(url);
+            var entity = JsonConvert.DeserializeObject<List<Testimonial>>(responseMessage);
+            return PartialView("_Testimonial", entity);
+        }
+
     }
 }

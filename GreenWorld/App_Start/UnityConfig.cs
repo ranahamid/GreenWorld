@@ -9,6 +9,7 @@ using System.Data.Entity;
 using System.Web.Http;
 using System.Web.Mvc;
 using Unity.WebApi;
+using GreenWorld.DAL;
 
 namespace GreenWorld
 {
@@ -61,9 +62,12 @@ namespace GreenWorld
             //  container.RegisterType<IAppointmentAccessRepository<Appointment, int>, AppointmentDataAccessRepository>();
             //TeacherWorkingArea
             // container.RegisterType<ITeacherWorkingAreaAccessRepository<TeacherWorkingArea, int>, TeacherWorkingAreaDataAccessRepository>();
-
+            //testimonial
+            container.RegisterType<ITestimonialAccessRepository<Testimonial, int>, TestimonialDataAccessRepository>();
             //product
             container.RegisterType<IProductAccessRepository<Product, int>, ProductDataAccessRepository>();
+            //University
+            container.RegisterType<IUniversityAccessRepository<University, int>, UniversityDataAccessRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

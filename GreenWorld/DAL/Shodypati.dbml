@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GreenWorld" Class="GreenWorldDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=Shikhai;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=GreenWorld;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BannerImageTbl" Member="BannerImageTbls">
     <Type Name="BannerImageTbl">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -179,6 +179,31 @@
       <Column Name="ShowOnHomePage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
       <Column Name="UpdatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UniversityTbl" Member="UniversityTbls">
+    <Type Name="UniversityTbl">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UpdatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestimonialTbl" Member="TestimonialTbls">
+    <Type Name="TestimonialTbl">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="PersonName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PersonTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="UpdatedOnUtc" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

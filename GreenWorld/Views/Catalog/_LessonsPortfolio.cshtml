@@ -1,0 +1,62 @@
+﻿@model GreenWorld.Models.Portfolio 
+
+<h3 class="text-center">Browse Lessons</h3>
+
+<div class="portfolio-content portfolio-4">
+    <div id="js-filters-full-width" class="cbp-l-filters-alignCenter">
+
+        @{
+            int count = 0;
+            int totalParentCat = Model.ParenCategories.Count();
+
+            foreach (var item in Model.ParenCategories)
+            {
+                count++;
+
+                <div data-filter=".@item.Value" class="cbp-filter-item">
+                    @item.Text
+                    <div class="cbp-filter-counter"></div>
+                </div>
+
+                if (count < totalParentCat)
+                {
+                    <span>/</span>
+                }
+
+            }
+        }
+    </div>
+
+    <div id="js-grid-full-width" class="cbp">
+        @{
+            foreach (var item in Model.portfolioChildren)
+            {               
+                <div class="cbp-item  @item.Parent1Id">
+                    <a href="/Categories/details/@item.Id" class="cbp-caption " data-title="@item.Name_English">
+                        <div class="col-md-3" style="min-height:60px;">
+                            <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                                <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> @item.Name_English</h3>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            }
+        }
+        @{
+            foreach (var item in Model.ParenCategories)
+            {
+                <div class="cbp-item  @item.Value">
+                    <a href="/Categories/SearchAll/@item.Value" class="cbp-caption cbp-lightbox" data-title="@item.Text">
+                        <div class="col-md-3" style="min-height:60px;">
+                            <div style="background-color:#376285;margin:2px;min-height:60px; min-width:270px;">
+                                <h3 style="color:white !important; text-align:center; vertical-align:central;padding-top: 18px;"> View All Lessons</h3>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            }
+        }
+    </div>
+ </div>
