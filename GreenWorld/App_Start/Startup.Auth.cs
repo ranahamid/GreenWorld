@@ -10,7 +10,7 @@ using GreenWorld.Providers;
 
 namespace GreenWorld
 {
-    public partial class Startup
+    public partial class Startup 
     {
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 
