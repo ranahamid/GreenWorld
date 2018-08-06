@@ -72,5 +72,17 @@ namespace GreenWorld.Controllers.Api
             _repository.Delete(id);
             return StatusCode(HttpStatusCode.NoContent);
         }
+
+        //custome
+        //GetAllPublishedUniversities
+
+        [Route("api/UniversityApi/GetAllPublishedUniversities")]
+        // GET: api/UniversityApi/GetAllPublishedUniversities
+        public IEnumerable<University> GetAllPublishedUniversities()
+        {
+            return _repository.GetAllPublishedUniversities();
+        }
+
+
     }
 }

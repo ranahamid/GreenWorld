@@ -155,9 +155,26 @@ namespace GreenWorld.DAL
 
         //custom
 
-        public List<SelectListItem> GetAllCategoriesSelectList()
+        
+        public IEnumerable<University> GetAllPublishedUniversities()
         {
-            return AllCategories;
+            List<University> entities = new List<University>();
+
+            entities = Db.UniversityTbls.Where(x=>x.Published==true).Select(x => new University()
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Description = x.Description,
+                DisplayOrder = x.DisplayOrder,
+                ImagePath = HttpUtility.UrlPathEncode(baseUrl + x.ImagePath),
+                RawDBImagePath = x.ImagePath,
+                CreatedOnUtc = x.CreatedOnUtc,
+                UpdatedOnUtc = x.UpdatedOnUtc,
+                Published = x.Published,
+
+            }).OrderBy(x => x.DisplayOrder).ToList();
+
+            return entities;
         }
 
 

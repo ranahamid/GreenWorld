@@ -5,70 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
-<div class="row">
-    <div class="col-md-2">
-        <span>
-            <a href="@Url.Action("Create")" class="btn btn-default">
-                <span class="glyphicon glyphicon-plus-sign"></span>
-                Create New
-            </a>
-        </span>
+<div class="bangla-newspaper">
+    @*<div class="box-heading box-sections box-block">
+            <p>Universities</p>
+        </div>*@
+    <div class="col-sm-12 text-center">
+        <span class="red_button" style="padding-bottom:10px;"> Universities</span>
     </div>
-</div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-     
-            <th>
-                @Html.DisplayNameFor(model => model.DisplayOrder)
-            </th>
+    <div id="cards" class="container mb-2" style="padding-bottom: 1px">
+        @{
+            if (Model != null && Model.Count() > 0)
+            {
+                int counter = 0;
+                <div class="row">
+                    @foreach (var article in Model)
+                    {
+                        if (counter != 0 && counter % 3 == 0)
+                        {
+                        @:</div>
+                        @:<div class="row">
+                        }
+                              <a href="/universities/details/@article.Id">
+                                  <div class="col-md-4">
+                                      <div class="thumbnail">
+                                          <img src="@article.ImagePath" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                                          <div class="caption">
+                                              <h3 id="thumbnail-label">@article.Name</h3>
 
-
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOnUtc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UpdatedOnUtc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Published)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-           
-                <td>
-                    @Html.DisplayFor(modelItem => item.DisplayOrder)
-                </td>
-
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedOnUtc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UpdatedOnUtc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Published)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </a>
+                        counter++;
+                    }
+                </div>
+            }
         }
-    </tbody>
-</table>
+
+
+
+    </div>
+
+</div>

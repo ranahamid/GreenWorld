@@ -46,7 +46,7 @@ namespace GreenWorld.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> Index()
         {
-         //   url = url + "/" + "GetAllUniversities";
+           url = url + "/" + "GetAllPublishedUniversities";
             var responseMessage = await client.GetAsync(url);
             if (!responseMessage.IsSuccessStatusCode) throw new Exception("Exception");
             var responseData = responseMessage.Content.ReadAsStringAsync().Result;
